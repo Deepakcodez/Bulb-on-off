@@ -1,0 +1,106 @@
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #181818;
+    width: 100%;
+    min-height: 100vh;
+}
+.bulb{
+    position: relative;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: #5a5a5a;
+}
+.bulb::before{
+    content: " ";
+    position: absolute;
+    height: 60px;
+    width: 30px;
+    background: #5a5a5a;
+    left: 22.5%;
+    top: -35px;
+    border-top: solid black 17px;
+    border-radius:5px;
+}
+.wire{
+    position: relative;
+    height: 599px;
+    width: 2px;
+    background: #000;
+    top: -350px;
+    left: 30px;
+}
+
+
+.switch{
+position: relative;
+    height: 50px;
+    width: 50px;
+    background: #ffffff;
+    left: 50px;
+    top:100px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.switch .btn{
+    position: relative;
+    height:35px;
+    width: 20px;
+    background: linear-gradient(rgb(58, 58, 58), white, rgb(58, 58, 58));
+    border:solid black 1px;
+}
+.switch .btn::before{
+    content: " ";
+    position: absolute;
+    height:90%;
+    width: 18px;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: linear-gradient(rgb(197, 197, 197), white, rgb(197, 197, 197));
+    border-bottom-left-radius:  2px;
+    border-bottom-right-radius:  2px;
+
+}
+.on .switch .btn::before{
+    top:10%;
+    border-top-left-radius:  2px;
+    border-top-right-radius:  2px;
+}
+
+body.on{
+    background:radial-gradient(rgb(162, 162, 162),rgb(68, 68, 68));
+}
+
+
+
+body.on .bulb   {
+    background: #f9f8f8;
+}
+body.on .bulb::before   {
+    background: #f9f8f8;
+}
+body.on .bulb::after{
+    content: " ";
+    position: absolute;
+    height: 100px;
+    border-radius: 50%;
+    width: 100px;
+    left: -19px; 
+    top: -12px;
+    background: #ffffff;
+    filter: blur(25px);
+    z-index: -1;
+ 
+  
+}
